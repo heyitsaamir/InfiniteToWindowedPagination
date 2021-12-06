@@ -1,0 +1,9 @@
+type FooObject {
+  id: ID!
+  name: String!
+  value: String!
+}
+
+type Query {
+  getObjects: [FooObject!]
+}

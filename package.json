@@ -1,0 +1,21 @@
+{
+  "name": "graphql-with-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "workspaces": [
+    "packages/api"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "serve": "npm -w packages/api run start"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@graphql-codegen/cli": "^2.3.0",
+    "graphql": "^15.7.2",
+    "typescript": "^4.5.2"
+  }
+}
