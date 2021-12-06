@@ -4,11 +4,13 @@
   "description": "",
   "main": "index.js",
   "workspaces": [
-    "packages/api"
+    "packages/api",
+    "packages/web"
   ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "serve": "npm -w packages/api run start"
+    "serve": "npm -w packages/api run start",
+    "web": "npm -w packages/web run start"
   },
   "keywords": [],
   "author": "",
