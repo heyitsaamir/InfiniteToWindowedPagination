@@ -1,8 +1,13 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import { doWork } from './graphql/mockServer';
 
 function App() {
+  useEffect(() => {
+    doWork();
+  }, [])
+
   return (
     <div className="App">
       <header className="App-header">
