@@ -1,6 +1,10 @@
 {
-  hero {
+  Users {
+    id
     name
-    appearsIn
+  }
+
+  type Query {
+    users: [Client]
   }
 }

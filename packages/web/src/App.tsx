@@ -1,20 +1,20 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import logo from './logo.svg';
 import './App.css';
-import { doWork } from './graphql/mockServer';
+import { doWork } from './graphql/infiniteListMockServer';
 
 function App() {
+  const [res, setRes] = useState('');
   useEffect(() => {
-    doWork();
+    doWork().then((res) => {
+      setRes(JSON.stringify(res, null, 2));
+    });
   }, [])
 
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
         <a
           className="App-link"
           href="https://reactjs.org"
@@ -24,6 +24,10 @@ function App() {
           Learn React
         </a>
       </header>
+
+      <pre style={{width: '100%'}}>
+          {res}
+        </pre>
     </div>
   );
 }
