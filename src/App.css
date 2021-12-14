@@ -37,8 +37,19 @@
   }
 }
 
-pre {
-  flex-wrap: wrap;
-  overflow: scroll;
+pre.code-display {
+  max-height: 100vh;
+}
 
+.container {
+  display: flex;
+  padding: 10px;
+}
+
+.container > div {
+  flex: 2;
+}
+
+.container > pre {
+  flex: 1
 }
